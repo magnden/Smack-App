@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		27F038FD59C62A32268D6DA7 /* Pods_Smack.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3C8E3C7E4F47F2643B54498E /* Pods_Smack.framework */; };
 		95EAEF0B1F90EE180023C1C1 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAEF0A1F90EE180023C1C1 /* AppDelegate.swift */; };
 		95EAEF0D1F90EE180023C1C1 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95EAEF0C1F90EE180023C1C1 /* ViewController.swift */; };
 		95EAEF101F90EE180023C1C1 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95EAEF0E1F90EE180023C1C1 /* Main.storyboard */; };
@@ -15,6 +16,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3C8E3C7E4F47F2643B54498E /* Pods_Smack.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Smack.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5141C2E65F20EE91313A08F2 /* Pods-Smack.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.debug.xcconfig"; sourceTree = "<group>"; };
+		57DC7C81BEA0598C8506BD25 /* Pods-Smack.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Smack.release.xcconfig"; path = "Pods/Target Support Files/Pods-Smack/Pods-Smack.release.xcconfig"; sourceTree = "<group>"; };
 		95EAEF071F90EE180023C1C1 /* Smack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Smack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		95EAEF0A1F90EE180023C1C1 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		95EAEF0C1F90EE180023C1C1 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -29,6 +33,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				27F038FD59C62A32268D6DA7 /* Pods_Smack.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +45,8 @@
 			children = (
 				95EAEF091F90EE180023C1C1 /* Smack */,
 				95EAEF081F90EE180023C1C1 /* Products */,
+				C2FA40EC648A084C5CED4828 /* Pods */,
+				BC7658F513943F71C52DC6CE /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -64,6 +71,23 @@
 			path = Smack;
 			sourceTree = "<group>";
 		};
+		BC7658F513943F71C52DC6CE /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3C8E3C7E4F47F2643B54498E /* Pods_Smack.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		C2FA40EC648A084C5CED4828 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5141C2E65F20EE91313A08F2 /* Pods-Smack.debug.xcconfig */,
+				57DC7C81BEA0598C8506BD25 /* Pods-Smack.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +95,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 95EAEF191F90EE180023C1C1 /* Build configuration list for PBXNativeTarget "Smack" */;
 			buildPhases = (
+				1185CF14DAAEC7123F287A99 /* [CP] Check Pods Manifest.lock */,
 				95EAEF031F90EE180023C1C1 /* Sources */,
 				95EAEF041F90EE180023C1C1 /* Frameworks */,
 				95EAEF051F90EE180023C1C1 /* Resources */,
+				91104BBB1A6F411B5712C79D /* [CP] Embed Pods Frameworks */,
+				95A28CDE995268FCA62493F0 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -130,6 +157,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		1185CF14DAAEC7123F287A99 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		91104BBB1A6F411B5712C79D /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smack/Pods-Smack-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		95A28CDE995268FCA62493F0 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-Smack/Pods-Smack-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		95EAEF031F90EE180023C1C1 /* Sources */ = {
@@ -272,6 +347,7 @@
 		};
 		95EAEF1A1F90EE180023C1C1 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5141C2E65F20EE91313A08F2 /* Pods-Smack.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +363,7 @@
 		};
 		95EAEF1B1F90EE180023C1C1 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 57DC7C81BEA0598C8506BD25 /* Pods-Smack.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
